@@ -5,7 +5,7 @@ function displayAbbreviations() {
     if (abbreviations.length < 1) return false;
     var defs = new Array();
     //遍历这些缩略词
-    for (var i=0; i<abbreviations.length; i++) {
+    for (var i = 0; i < abbreviations.length; i++) {
         var currentAbbr = abbreviations[i];
         if (currentAbbr.childNodes.length < 1) continue;
         var definition = currentAbbr.getAttribute("title");
@@ -16,14 +16,14 @@ function displayAbbreviations() {
     var dlist = document.createElement("dl");
     for (key in defs) {
         var definition = defs[key];
-    //创建dt,dd元素
+        //创建dt,dd元素
         var dtitle = document.createElement("dt");
         var dtitleText = document.createTextNode(key);
         dtitle.appendChild(dtitleText);
         var ddesc = document.createElement("dd");
         var ddescText = document.createTextNode(definition);
         ddesc.appendChild(ddescText);
-    //将创建的dt,dd元素加入定义列表
+        //将创建的dt,dd元素加入定义列表
         dlist.appendChild(dtitle);
         dlist.appendChild(ddesc);
     }

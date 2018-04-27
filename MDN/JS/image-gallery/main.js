@@ -12,7 +12,8 @@ for (var i = 1; i <= 5; i++) {
   thumbBar.appendChild(newImage);
   //newImage.onclick = function(e){...}
   newImage.addEventListener('click', function (e) {
-    var imgSrc = e.target.getAttribute('src');
+    //e.target指事件对象，也可以用this代替
+    var imgSrc = this.getAttribute('src');
     displayImage(imgSrc);
   });
 }
